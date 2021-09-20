@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Background image</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="important words of webpage">
+    <meta name="description" content="short note regarding webpage">
+    <meta name="author" content="Author name">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <h1 class="head3">Place <strong class="place">Your Order</strong></h1>
+    </header>
+    <section class="checkout">
+    <form action="menu.html"> <!--we can write novalidate-then browser will not check-->
+    <label>Name:</label><input type="text" id="name">
+    <br><br>
+   
+   
+    <label>Email:</label><input type="email" id="mail">
+    <br><br>
+    <label>Mobile:</label><input type="text" id="mob">
+    <br><br>
+    <label>Item Name:</label><input type="text" id="item">
+    <br><br>
+    <label>Quantity:</label><input type="number" id="qty" min="1">  
+     
+    <br><br>
+    <label>Address:<textarea></textarea></label>
+    
+    <br><br>
+    <input type="submit" value="Check out" class="submit" onclick="myFunction()">
+    <br><br>
+    <input type="Reset" class="reset">
+
+    
+</form>
+</section>
+<script>
+    function myFunction() {
+
+        var retVal = confirm("Do you want to continue ?");
+        if( retVal == true ) {
+            document.write ("Successfully ordered");
+            return true;
+        }else {
+            document.write ("User does not want to continue!");
+            return false;
+        }
+    
+    }
+
+</script>
+
+
+</body>
+</html>
